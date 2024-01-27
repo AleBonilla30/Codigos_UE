@@ -3,7 +3,7 @@ package Usuario;
 public class Persona {
     private String nombre, apellido, dni;
     private int edad;
-    private double peso, altura;
+    private double peso, altura, imc;
 
     public Persona() {
     }
@@ -42,57 +42,83 @@ public class Persona {
         System.out.println();
     }
     public void incrementarEdad(int incremento){
-        this.edad += incremento;
+
+        edad += incremento;
+    }
+    public void mostrarEstado(double imc){
+        System.out.println("-----Estado Fisico-----");
+        if (imc < 18.5){
+            System.out.println("Peso inferior al normal");
+        } else if (imc >= 18.5 && imc <24.9) {
+            System.out.println("Peso Normal");
+        } else if (imc >= 25 && imc <29.9) {
+            System.out.println("Peso superior a lo normal");
+        }else {
+            System.out.println("Obesidad");
+        }
     }
     public double calcularIMC(){
+
         return peso/(altura*altura);
     }
 
     public String getNombre() {
+
         return nombre;
     }
 
     public void setNombre(String nombre) {
+
         this.nombre = nombre;
     }
 
     public String getApellido() {
+
         return apellido;
     }
 
     public void setApellido(String apellido) {
+
         this.apellido = apellido;
     }
 
     public String getDni() {
+
         return dni;
     }
 
     public void setDni(String dni) {
+
         this.dni = dni;
     }
 
     public int getEdad() {
+
         return edad;
     }
 
     public void setEdad(int edad) {
+
         this.edad = edad;
     }
 
     public double getAltura() {
+
         return altura;
     }
 
     public void setAltura(int altura) {
+
         this.altura = altura;
     }
 
     public double getPeso() {
+
         return peso;
     }
 
     public void setPeso(double peso) {
+
         this.peso = peso;
     }
 }

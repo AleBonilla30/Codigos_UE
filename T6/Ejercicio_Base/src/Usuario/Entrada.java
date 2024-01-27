@@ -48,22 +48,11 @@ public class Entrada {
         double imcp1= p1.calcularIMC();
         System.out.println("IMC de P1 es: "+imcp1);
 
-        mostrarEstado(imcp1);
+        p1.mostrarEstado(imcp1);
 
 
     }
-    public static void mostrarEstado(double imc){
-        System.out.println("-----Estado Fisico-----");
-        if (imc < 18.5){
-            System.out.println("Peso inferior al normal");
-        } else if (imc >= 18.5 && imc <24.9) {
-            System.out.println("Peso Normal");
-        } else if (imc >= 25 && imc <29.9) {
-            System.out.println("Peso superior a lo normal");
-        }else {
-            System.out.println("Obesidad");
-        }
-    }
+
 
     }
 
