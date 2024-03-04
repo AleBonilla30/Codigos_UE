@@ -13,7 +13,7 @@ public class Triangulo {
         this.altura = altura;
     }
 
-    public void calcularArea(int base, int altura){
+    public void calcularArea(){
        int area = (base * altura)/2;
         System.out.println("El area del triangulo es: "+area);
     }
@@ -27,10 +27,10 @@ public class Triangulo {
         switch (opcion){
             case 1:
                 System.out.println("Introduce la base:");
-                base = scanner.nextInt();
+                this.base = scanner.nextInt();
                 System.out.println("Introduce la altura:");
-                altura = scanner.nextInt();
-               calcularArea(base,altura);
+                this.altura = scanner.nextInt();
+               calcularArea();
                 break;
             case 2:
                 System.out.println("Base: "+base);

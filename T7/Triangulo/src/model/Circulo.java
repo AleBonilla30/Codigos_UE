@@ -13,12 +13,12 @@ public class Circulo {
         this.radio = radio;
     }
 
-    public void calcularArea(double radio){
+    public void calcularArea(){
          this.area = Math.PI * Math.pow(radio,2);
         System.out.println("El are de un circulo es: "+area);
     }
 
-    public void calcularDiametro(double radio){
+    public void calcularDiametro(){
          this.diametro = 2* radio;
         System.out.println("El diametro de el circulo es: "+this.diametro);
     }
@@ -32,13 +32,13 @@ public class Circulo {
         switch (opcion){
             case 1:
                 System.out.println("Introduce el radio:");
-                radio = scanner.nextDouble();
-                calcularArea(radio);
+                this.radio = scanner.nextDouble();
+                calcularArea();
                 break;
             case  2:
                 System.out.println("Introduce  el radio:");
-                radio = scanner.nextDouble();
-                calcularDiametro(radio);
+                this.radio = scanner.nextDouble();
+                calcularDiametro();
                 break;
             case 3:
                 System.out.println("El radio es: "+radio);
