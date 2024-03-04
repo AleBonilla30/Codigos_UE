@@ -49,6 +49,8 @@ public class Cuadrado {
             case 3:
                 System.out.println("La base es: "+base);
                 System.out.println("La altura es: "+altura);
+            case 4:
+                System.out.println("La opcion no es valida..");
         }
 
         sc.nextLine();

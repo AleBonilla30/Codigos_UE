@@ -20,7 +20,6 @@ public class Entrada {
            opcion = scanner.nextInt();
            switch (opcion){
                case 1:
-
                    Triangulo triangulo = new Triangulo();
                    triangulo.menuTriangulo();
                    break;
