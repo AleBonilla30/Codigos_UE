@@ -13,13 +13,13 @@ public class Circulo {
         this.radio = radio;
     }
 
-    public void calcularArea(double area){
-         this.area = Math.PI * Math.pow(this.radio,this.radio);
-        System.out.println("El are de un circulo es: "+this.area);
+    public void calcularArea(double radio){
+         this.area = Math.PI * Math.pow(radio,2);
+        System.out.println("El are de un circulo es: "+area);
     }
 
     public void calcularDiametro(double radio){
-         this.diametro = 2* this.radio;
+         this.diametro = 2* radio;
         System.out.println("El diametro de el circulo es: "+this.diametro);
     }
     public void menuCirculo(){

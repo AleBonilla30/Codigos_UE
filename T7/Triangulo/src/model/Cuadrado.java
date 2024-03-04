@@ -15,12 +15,12 @@ public class Cuadrado {
     }
 
     public void calcularAreaCuadrado(int base, int altura){
-        this.area = this.base * this.altura;
+        this.area = base * altura;
         System.out.println("El area de un cuadrado es: "+this.area);
     }
 
     public void calcularPerimetro(int base, int altura){
-         this.perimetro = (2 * this.altura) + (2* this.base);
+         this.perimetro = (2 * altura) + (2* base);
         System.out.println("El perimero de un cuadrado es: "+this.perimetro);
     }
 
