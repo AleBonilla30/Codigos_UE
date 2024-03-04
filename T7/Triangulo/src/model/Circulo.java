@@ -24,7 +24,7 @@ public class Circulo {
     }
     public void menuCirculo(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Haz seleccionado circulo que operacion deseas realizar?");
+        System.out.println("Has seleccionado circulo que operacion deseas realizar?");
         System.out.println("1. Calcular area");
         System.out.println("2.Calcular diametro");
         System.out.println("3. Mostrar los datos");

@@ -20,7 +20,7 @@ public class Triangulo {
 
     public void menuTriangulo(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Haz seleccionado triangulo que operacion deseas realizar?");
+        System.out.println("Has seleccionado triangulo que operacion deseas realizar?");
         System.out.println("1. Calcular area");
         System.out.println("2. Mostrar los datos");
         int opcion = scanner.nextInt();
