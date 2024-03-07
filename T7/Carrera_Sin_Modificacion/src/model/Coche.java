@@ -20,19 +20,24 @@ public class Coche {
     }
 
     public void acelerar(int velocidadAcelerar){
-        this.velocidad += (int) (Math.random()*velocidadAcelerar);
-       double distanciaRecorrida = velocidad;
-       kmRecorridos = distanciaRecorrida;
+        this.velocidad += velocidadAcelerar;
+        double distanciaRecorrida = velocidad *(cv * (1+Math.random()*10));
+        kmRecorridos = distanciaRecorrida;
+        int velocidadMaxima = 180;
+        if (velocidad > velocidadMaxima){
+            velocidad = velocidadMaxima;
+            System.out.println("La velocidad maxima del coche es: "+velocidadMaxima);
+        }
 
     }
 
     public void frenar(int frenarCoche){
         velocidad -= frenarCoche;
         int velocidadMinima = 0;
-      if (velocidad < velocidadMinima){
-          velocidad = velocidadMinima;
-        System.out.println("La velocidad minima del coche es "+velocidadMinima);
-      }
+        if (velocidad < velocidadMinima){
+            velocidad = velocidadMinima;
+            System.out.println("La velocidad minima del coche es "+velocidadMinima);
+        }
     }
 
     public void resetear(){
@@ -41,10 +46,8 @@ public class Coche {
     }
 
     public void mostrarDatos(){
-        System.out.println("Modelo: "+modelo);
-        System.out.println("Matricula: "+matricula);
-        System.out.println("CV: "+cv);
-
+        System.out.println("Los datos del coche es");
+        System.out.println("La matricula "+matricula+" el modelo "+modelo+" los CV del coche "+cv+" la velocidad "+velocidad+" los km recorridos del coche "+kmRecorridos);
     }
 
     public int getVelocidad() {
