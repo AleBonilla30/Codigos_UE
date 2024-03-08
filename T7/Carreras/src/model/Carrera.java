@@ -13,25 +13,27 @@ public class Carrera {
 
     public void iniciarCarrera(Coche coche1, Coche coche2){
         System.out.println("🏁Iniciando la carrera🏁");
+        boolean carreraFinalizada = false;
         do {
             for (int i = 0; i < 10000; i++) {
                 coche1.acelerar(100);
-                coche2.acelerar(110);
+                coche2.acelerar(100);
+                if (coche1.getKmRecorridos() >= kilometrosEtapa && coche2.getKmRecorridos() >= kilometrosEtapa){
+                    carreraFinalizada = true;
+                    break;
+                }
             }
-
-
-
-        }while (coche1.getKmRecorridos()>= kilometrosEtapa || coche2.getKmRecorridos()>= kilometrosEtapa);
+        }while (!carreraFinalizada);
          ganador();
     }
 
     public void ganador(){
         if (coche1.getKmRecorridos() > coche2.getKmRecorridos()){
-            coche1.equals(ganador);
-            System.out.println("El ganador es el coche1 con matricula "+coche1.getMatricula()+"con kilometros recorridos "+coche1.getKmRecorridos());
+            ganador = coche1.getMatricula();
+            System.out.println("El ganador es el coche1 con matricula "+coche1.getMatricula()+" con kilometros recorridos "+coche1.getKmRecorridos());
         }else {
-            coche2.equals(ganador);
-            System.out.println("El ganador es el coche1 con matricula "+coche2.getMatricula()+"con kilometros recorridos "+coche2.getKmRecorridos());
+            ganador = coche2.getMatricula();
+            System.out.println("El ganador es el coche1 con matricula "+coche2.getMatricula()+" con kilometros recorridos "+coche2.getKmRecorridos());
         }
     }
 }

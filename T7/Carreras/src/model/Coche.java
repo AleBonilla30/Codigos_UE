@@ -21,7 +21,7 @@ public class Coche {
 
     public void acelerar(int velocidadAcelerar){
         this.velocidad += (int) (Math.random()*velocidadAcelerar);
-       double distanciaRecorrida = velocidad;
+       double distanciaRecorrida =  velocidad * 0.5;
        kmRecorridos = distanciaRecorrida;
 
     }
