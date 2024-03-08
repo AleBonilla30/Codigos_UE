@@ -39,6 +39,7 @@ public class LlamadaNacional {
                 break;
             default:
                 this.coste = this.duracion * 0.70;
+                break;
         }
         return destino;
     }
@@ -75,5 +76,11 @@ public class LlamadaNacional {
         this.duracion = duracion;
     }
 
+    public int getDestino() {
+        return destino;
+    }
 
+    public void setDestino(int destino) {
+        this.destino = destino;
+    }
 }
