@@ -19,7 +19,7 @@ public class LlamadaLocal {
         System.out.println("Numero de origen: "+numOrigen);
         System.out.println("Numero de destino: "+numDestino);
         System.out.println("Duracion de la llamada: "+duracion);
-        System.out.println("Coste de llamada: "+coste);
+        System.out.println("Coste: " + coste + " unidades monetarias locales");
     }
 
     public long getNumOrigen() {

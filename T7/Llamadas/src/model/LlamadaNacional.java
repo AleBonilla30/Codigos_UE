@@ -15,6 +15,7 @@ public class LlamadaNacional {
         this.numeroDestino = numeroDestino;
         this.destino = destino;
         this.duracion = duracion;
+        this.coste = costeLlamada();
 
     }
 
@@ -22,7 +23,7 @@ public class LlamadaNacional {
         System.out.println("El numero de origen: "+numeroOrigen);
         System.out.println("El dumero de destino es: "+numeroDestino);
         System.out.println("Duracion de la llamada: "+duracion);
-        System.out.println("Coste: " + coste + " unidades monetarias");
+        System.out.println("Coste: " + coste + " unidades monetarias nacionales");
         System.out.println("Destino: " + destino);
 
     }
@@ -41,7 +42,7 @@ public class LlamadaNacional {
                 this.coste = this.duracion * 0.70;
                 break;
         }
-        return destino;
+        return coste;
     }
 
     public long getNumeroOrigen() {

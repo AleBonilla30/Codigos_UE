@@ -43,17 +43,13 @@ public class Entrada {
                     System.out.println("Se agrego correctamente");
                     break;
                 case 3:
-                    local = new LlamadaLocal(local.getNumOrigen(), local.getNumDestino(), local.getDuracion());
-                    local.mostrarDatos();
+                    centralita.listarLocales();
                     break;
                 case 4:
-                    nacional = new LlamadaNacional(nacional.getNumeroOrigen(), nacional.getNumeroDestino(), nacional.getDuracion(), nacional.getDestino());
-                    nacional.mostrarLlamadaNacional();
+                    centralita.listarNacionales();
                     break;
                 case 5:
-                    local = new LlamadaLocal(local.getNumOrigen(), local.getNumDestino(), local.getDuracion());
-                    nacional = new LlamadaNacional(nacional.getNumeroOrigen(), nacional.getNumeroDestino(), nacional.getDuracion(), nacional.getDestino());
-                    centralita.mostrarCostes();
+                    centralita.calcularCostesAcumulado();
                     break;
             }
             scanner.nextLine();
