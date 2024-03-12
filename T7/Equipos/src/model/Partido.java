@@ -20,7 +20,7 @@ public class Partido {
             enCurso = true;
             for (int i = 0; i < 3; i++) {
                 if (equipo1.atacar()){
-
+                     
                 }
             }
         }
