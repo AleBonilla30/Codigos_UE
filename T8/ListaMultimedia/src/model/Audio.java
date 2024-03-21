@@ -1,14 +1,14 @@
 package model;
 
-public class Audio extends Elemento  {
+public final class Audio extends Elemento  {
     private double duracion;
     private String soporte;
 
     public Audio() {
     }
 
-    public Audio(int identificador, int tamaño, String titulo, String formato, Persona autor, double duracion, String soporte) {
-        super(identificador, tamaño, titulo, formato, autor);
+    public Audio(int identificador, int tamano, String titulo, String formato, Persona autor, double duracion, String soporte) {
+        super(identificador, tamano, titulo, formato, autor);
         this.duracion = duracion;
         this.soporte = soporte;
     }

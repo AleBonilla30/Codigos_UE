@@ -1,6 +1,6 @@
 package model;
 
-public class Elemento {
+public  abstract class Elemento {
     private int identificador, tamano;
     private String titulo, formato;
     private Persona autor;

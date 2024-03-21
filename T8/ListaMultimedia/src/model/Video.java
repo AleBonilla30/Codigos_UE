@@ -2,17 +2,17 @@ package model;
 
 import java.util.ArrayList;
 
-public class Video extends Elemento {
+public final class Video extends Elemento {
     private Persona director;
-    private ArrayList<Persona> actores;
+    private Persona [] actores;
 
     public Video() {
     }
 
-    public Video(int identificador, int tamaño, String titulo, String formato, Persona autor, Persona director) {
-        super(identificador, tamaño, titulo, formato, autor);
+    public Video(int identificador, int tamano, String titulo, String formato, Persona autor, Persona director, Persona [] actores ) {
+        super(identificador, tamano, titulo, formato, autor);
         this.director = director;
-        this.actores = new ArrayList<>();
+        this.actores = actores;
     }
 
     @Override
@@ -32,11 +32,11 @@ public class Video extends Elemento {
         this.director = director;
     }
 
-    public ArrayList<Persona> getActores() {
+    public Persona[] getActores() {
         return actores;
     }
 
-    public void setActores(ArrayList<Persona> actores) {
+    public void setActores(Persona[] actores) {
         this.actores = actores;
     }
 }

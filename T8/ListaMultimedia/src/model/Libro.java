@@ -2,7 +2,7 @@ package model;
 
 
 
-public class Libro extends Elemento  {
+public final class Libro extends Elemento  {
     private String ISBN;
     private int numPaginas;
 
