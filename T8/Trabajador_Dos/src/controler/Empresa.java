@@ -18,8 +18,13 @@ public class Empresa {
 
     public void registrarTrabajadores(Trabajador trabajador){
         if (estaTrabajador(trabajador.getDni())== null){
-         listaTrabajadores.add(trabajador);
-        System.out.println("Trabajador registrado correctamente");
+            if (trabajador instanceof Jefe && tieneJefe()){
+                System.out.println("La empresa ya tiene un jefe registrado");
+            }else {
+                listaTrabajadores.add(trabajador);
+                System.out.println("Trabajador registrado correctamente");
+            }
+
         }else {
             System.out.println("El trabajador ya esta registrado");
         }
@@ -31,6 +36,14 @@ public class Empresa {
             }
         }
         return null;
+    }
+    public boolean tieneJefe(){
+        for (Trabajador trabajador:listaTrabajadores){
+            if (trabajador instanceof Jefe){
+                return true;
+            }
+        }
+        return false;
     }
     public void listarTrabajadores(int tipo){
         Scanner sc = new Scanner(System.in);
