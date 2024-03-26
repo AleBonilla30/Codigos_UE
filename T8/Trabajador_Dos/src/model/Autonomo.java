@@ -14,9 +14,9 @@ public class Autonomo extends Trabajador{
     }
 
     @Override
-    public void mostrarDatos(String dni) {
+    public void mostrarDatos() {
         System.out.println("Los datos de los autonomos son:");
-        super.mostrarDatos(dni);
+        super.mostrarDatos();
         System.out.println("sueldo: " + sueldo);
         System.out.println("contratado: " + contratado);
     }

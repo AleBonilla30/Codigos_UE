@@ -6,6 +6,7 @@ import model.Jefe;
 import model.Trabajador;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Empresa {
 
@@ -32,23 +33,42 @@ public class Empresa {
         return null;
     }
     public void listarTrabajadores(int tipo){
-       for (Trabajador trabajadores:listaTrabajadores){
-           if (tipo == 1){
-               if (trabajadores instanceof Autonomo){
-                   System.out.println("Es Autonomo");
-                   trabajadores.mostrarDatos(trabajadores.getDni());
-               } else if (tipo == 2) {
-                   if (trabajadores instanceof Asalariado){
-                       System.out.println("Es Asalariado");
-                       trabajadores.mostrarDatos(trabajadores.getDni());
-                   } else if (tipo == 3) {
-                       trabajadores.mostrarDatos(trabajadores.getDni());
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduce el dni del trabajador: ");
+        String dniBuscado = sc.nextLine();
+        boolean encontrado = false;
+       for (Trabajador trabajadores :listaTrabajadores){
+           if (tipo == 1 && trabajadores instanceof Jefe){
+               if (trabajadores.getDni().equals(dniBuscado)){
+                   encontrado = true;
+                   System.out.println("Es jefe:");
+                   trabajadores.mostrarDatos();
+                   System.out.println();
 
-                   }
                }
-           }
+           } else if (tipo == 2 && trabajadores instanceof Autonomo) {
+               if (trabajadores.getDni().equals(dniBuscado)){
+                   encontrado = true;
+                   System.out.println("Es autonomo");
+                   trabajadores.mostrarDatos();
+                   System.out.println();
+               }
 
+           } else if (tipo == 3 && trabajadores instanceof Asalariado) {
+               if (trabajadores.getDni().equals(dniBuscado)){
+                   encontrado = true;
+                   trabajadores.mostrarDatos();
+                   System.out.println();
+               }
+           }else if (!encontrado) {
+               System.out.println("No se encontro ningun trabajador con el DNI proporcionado.");
+           }
        }
+    }
+    public void listarTodos(){
+        for (Trabajador item:listaTrabajadores){
+            item.mostrarDatos();
+        }
     }
 
 }

@@ -15,9 +15,9 @@ public class Asalariado extends Trabajador {
     }
 
     @Override
-    public void mostrarDatos(String dni) {
+    public void mostrarDatos() {
         System.out.println("Los datos de los Asalariados son");
-        super.mostrarDatos(dni);
+        super.mostrarDatos();
         System.out.println("numPagas: " + numPagas);
         System.out.println("contratado: " + contratado);
 

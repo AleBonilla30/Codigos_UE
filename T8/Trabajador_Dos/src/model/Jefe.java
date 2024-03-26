@@ -18,8 +18,8 @@ public class Jefe extends Trabajador{
     }
 
     @Override
-    public void mostrarDatos(String dni) {
-        super.mostrarDatos(dni);
+    public void mostrarDatos() {
+        super.mostrarDatos();
         System.out.println("acciones: " + acciones);
         System.out.println("beneficio:" + beneficio);
     }

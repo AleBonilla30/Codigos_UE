@@ -1,6 +1,6 @@
 package model;
 
-import java.util.Scanner;
+
 
 public class Trabajador {
     private String nombre, apellido, dni;
@@ -13,10 +13,7 @@ public class Trabajador {
         this.apellido = apellido;
         this.dni = dni;
     }
-    public void mostrarDatos(String dni){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Introduce el dni: ");
-        dni = scanner.nextLine();
+    public void mostrarDatos(){
         System.out.println("Los datos son 📝");
         System.out.println("nombre: " + nombre);
         System.out.println("apellido: " + apellido);

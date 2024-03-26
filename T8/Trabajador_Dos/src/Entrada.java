@@ -2,7 +2,6 @@ import controler.Empresa;
 import model.Asalariado;
 import model.Autonomo;
 import model.Jefe;
-import model.Trabajador;
 
 import java.util.Scanner;
 
@@ -15,6 +14,7 @@ public class Entrada {
             System.out.println("Menu lista de trabajadores");
             System.out.println("1. Registrar trabajador:");
             System.out.println("2. Listar:");
+            System.out.println("3. Salir");
             System.out.print("Que quieres hacer: ");
             opcion = scanner.nextInt();
             switch (opcion){
@@ -61,32 +61,41 @@ public class Entrada {
                     }
                     break;
                 case 2:
-                    System.out.println("Los datos son..");
-                    System.out.println("1. Datos Autonomo");
-                    System.out.println("2. Datos asalariado");
-                    System.out.println("3. Todos los datos");
-                    System.out.print("Que quieres hacer: ");
-                    int option = scanner.nextInt();
-                    System.out.println("Introduce un numero del 1 al 3: ");
-                    int one = scanner.nextInt();
-                    switch (option){
-                        case 1:
-                            empresa.listarTrabajadores(one);
-                            break;
-                        case 2:
+                        System.out.println("Los datos son..");
+                        System.out.println("1. Datos Jefe");
+                        System.out.println("2. Datos Autonomo");
+                        System.out.println("3. Datos asalariado");
+                        System.out.println("4. Todos los datos");
+                        System.out.print("Que quieres hacer: ");
+                        int option = scanner.nextInt();
+                       System.out.println("Introduce un numero del 1 al 3: ");
+                       int one = scanner.nextInt();
+                        switch (option){
 
-                            empresa.listarTrabajadores(one);
-                            break;
-                        case 3:
-                            empresa.listarTrabajadores(one);
-                            break;
-                    }
+                            case 1:
+                                empresa.listarTrabajadores(one);
+                                break;
+                            case 2:
+                                empresa.listarTrabajadores(one);
+                                break;
+                            case 3:
+                                empresa.listarTrabajadores(one);
+                                break;
+                            case 4:
+                                empresa.listarTodos();
+                                break;
+                        }
                     break;
+                case 3:
+                    System.out.println("Saliendo del programa");
+                    break;
+                default:
+                    System.out.println("Opcion no valida.");
             }
-            scanner.next();
             System.out.println("Presiona enter para continuar");
-            scanner.next();
-        }while (opcion != 2);
+            scanner.nextLine();
+            scanner.nextLine();
+        }while (opcion !=3);
         scanner.close();
 
     }
