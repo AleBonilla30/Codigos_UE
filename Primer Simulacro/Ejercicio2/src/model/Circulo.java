@@ -11,7 +11,6 @@ public class Circulo extends Figura2D{
     @Override
     public double calcularPerimetro() {
         double perimetro = 2*Math.PI*radio;
-        System.out.println("El perimetro es: "+perimetro);
         return perimetro;
     }
 
@@ -25,6 +24,11 @@ public class Circulo extends Figura2D{
         return "Circulo{" +
                 "radio=" + radio +
                 '}';
+    }
+
+    @Override
+    public void mostrarDatos() {
+        System.out.println("Nombre: "+getNombre()+", Perimetro: "+calcularPerimetro());
     }
 
     @Override

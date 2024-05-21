@@ -11,7 +11,6 @@ public class Rectangulo extends Figura2D{
     @Override
     public double calcularPerimetro() {
         double perimetro = base+altura;
-        System.out.println("El perimetro es: "+perimetro);
         return perimetro;
     }
 
@@ -27,6 +26,11 @@ public class Rectangulo extends Figura2D{
                 "base=" + base +
                 ", altura=" + altura +
                 '}';
+    }
+
+    @Override
+    public void mostrarDatos() {
+        System.out.println("Nombre: "+getNombre()+", Perimetro: "+calcularPerimetro());
     }
 
     @Override

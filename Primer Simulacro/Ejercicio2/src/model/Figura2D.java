@@ -20,6 +20,9 @@ public abstract class Figura2D implements FiguraGeometrica {
                 '}';
     }
 
+    @Override
+    public abstract void mostrarDatos() ;
+
     public String getNombre() {
         return nombre;
     }

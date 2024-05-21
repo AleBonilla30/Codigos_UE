@@ -11,7 +11,6 @@ public class Triangulo extends Figura2D {
     @Override
     public double calcularPerimetro() {
         double perimetro = lado1+lado2+lado3;
-        System.out.println("El perimetro es: "+perimetro);
         return perimetro;
     }
 
@@ -29,6 +28,11 @@ public class Triangulo extends Figura2D {
                 ", lado2=" + lado2 +
                 ", lado3=" + lado3 +
                 '}';
+    }
+
+    @Override
+    public void mostrarDatos() {
+        System.out.println("Nombre: "+getNombre()+", Perimetro: "+calcularPerimetro());
     }
 
     @Override
