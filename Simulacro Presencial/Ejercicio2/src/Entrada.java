@@ -27,9 +27,10 @@ public class Entrada {
             System.out.print("Introduce un numero: ");
             numeroUsuario[i]= scanner.nextInt();
             for (int item : numerosAleatorio){
-                for (int usuario : numeroUsuario){
-                    aciertos++;
-                }
+                    if (item == numeroUsuario[i]){
+                        aciertos++;
+                    }
+
             }
         }
         System.out.println("El numero total de aciertos es: "+aciertos);
