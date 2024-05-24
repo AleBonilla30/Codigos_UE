@@ -87,6 +87,7 @@ public class Estudiante {
     public void setNota3(double nota3) {
         this.nota3 = nota3;
     }
+
     public static ArrayList<Estudiante> leerEstudiante(String nombreFichero) throws IOException{
         ArrayList<Estudiante> estudiantes = new ArrayList<>();
         File file = new File(nombreFichero);

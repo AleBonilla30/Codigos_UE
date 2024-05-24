@@ -11,12 +11,14 @@ public class LeerAlmuno {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String linea;
             while ((linea = bufferedReader.readLine()) != null){
-
-                linea =  linea.replaceAll(" ","");
-                if (Integer.parseInt(linea.split(",")[3]) > notaMax){
-                    notaMax = Integer.parseInt(linea.split(",")[3]);
-                    nombreMax = linea.split(",")[0]+ " "+linea.split(",")[1];
+                String dato[] = linea.split(",");
+                if (dato.length >=4){
+                    if (Integer.parseInt(dato[3]) > notaMax){
+                        notaMax = Integer.parseInt(dato[3]);
+                        nombreMax = dato[0]+ " "+dato[1];
+                    }
                 }
+
             }
             System.out.printf("El alumno con la nota mas alta es %s con una nota de %d",nombreMax,notaMax);
             bufferedReader.close();
