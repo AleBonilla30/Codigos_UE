@@ -22,6 +22,17 @@ public class Alumno {
         this.correo = correo;
         this.telefono = telefono;
     }
+    public Alumno(String nombre , String apellido, int telefono){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono= telefono;
+    }
+
+    public void mostrarDatos(){
+        System.out.println("nombre = " + nombre);
+        System.out.println("apellido = " + apellido);
+        System.out.println("telefono = " + telefono);
+    }
 
     public int getId() {
         return id;
