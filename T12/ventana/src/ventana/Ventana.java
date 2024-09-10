@@ -24,18 +24,25 @@ public class Ventana extends JFrame {
         panel.setLayout(null);//desactivamos el diseño por defecto
         this.getContentPane().add(panel);// agregamos el panel a la ventana
 
-        JLabel etiqueta = new JLabel("Hola", SwingConstants.CENTER);//creacion de etiqueta y poner centrada horizontalmente el texto
+        //Etiqueta 1 - Etiqueta tipo texto
+        JLabel etiqueta = new JLabel("Tienda AleBo", SwingConstants.CENTER);//creacion de etiqueta y poner centrada horizontalmente el texto
         //etiqueta.setText("Hola Mundo");//Establecemos el texto de la etiqueta
-        etiqueta.setBounds(10,10,100,40);
+        etiqueta.setBounds(150,100,300,80);
         //etiqueta.setHorizontalAlignment(SwingConstants.CENTER); //esto se utiliza si no se quiere ponerlotodo en el constructor.
         //si no que se utiliza los metodos por separado.
         etiqueta.setForeground(Color.blue);//Establecemos el color de la etiqueta
         etiqueta.setOpaque(true);//establecemos pintar el fondo de la etiqueta
         etiqueta.setBackground(Color.white);//Establecer el fondo de las etiquetas
-        etiqueta.setFont(new Font("calibri",Font.ITALIC,20));//establecer la fuente del texto
+        etiqueta.setFont(new Font("chiller",Font.ITALIC,40));//establecer la fuente del texto
         //en lugar de poner Font.ITALIC se puede poner numero que 0-Normal, 1-Negrita, 2-Cursiva y 3-Cursiva y Negrita
 
         panel.add(etiqueta);//agregamos la etiqueta al panel
+
+        //Etiqueta 2- etiqueta tipo imagen
+        JLabel etiqueta2 = new JLabel(new ImageIcon("etiqueta.jpg"));
+        etiqueta2.setBounds(10,80,640,640);
+
+        panel.add(etiqueta2);//agregamos la etiqueta al panel
 
 
 
